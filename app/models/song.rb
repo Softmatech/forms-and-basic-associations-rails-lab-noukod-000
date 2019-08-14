@@ -6,7 +6,7 @@ class Song < ActiveRecord::Base
 
   def genre_name= name
     #since the song has no genre, we have to create it
-    genre ? genre.name  : nil
+    self.genre  = Genre.find_or_create_by name: name
   end
 
 end
