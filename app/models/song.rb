@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  
+
   belongs_to :artist
   belongs_to :genre
   has_many :notes
@@ -8,6 +8,5 @@ class Song < ActiveRecord::Base
     #since the song has no genre, we have to create it
     genre ? genre.name  : nil
   end
-  
-end
 
+end
